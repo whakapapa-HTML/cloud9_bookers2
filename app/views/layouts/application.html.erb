@@ -10,7 +10,7 @@
   </head>
 
   <body class="d-flex flex-column vh- 100">
-    <header class="bg-dark">
+    <header class="bg-dark mb-5">
       <nav class="navbar navbar-light">
         <div class="container">
           <a class="navbar-brand y-3 text-white" href="/">Bookers</a>
@@ -21,29 +21,29 @@
              <ul class="navbar-nav ml-auto">
                <% if user_signed_in? %>
                 <li>
-                  <%= link_to "Home","/",class: 'text-white' %>
+                  <i class="fas fa-home mr-3"></i><%= link_to "Home","/", class: 'text-white'%>
                 </li>
                 <li>
-                  <%= link_to "Users" ,class: 'text-white'%>
+                  <i class="fas fa-users mr-3"></i><%= link_to "Users","/", class: 'text-white'%>
                 </li>
                     <li>
-                  <%= link_to "Books" ,class: 'text-white' %>
+                  <i class="fas fa-book-open mr-3"></i><%= link_to "Books","/",class: 'text-white'%>
                 </li>
                 <li>
-                  <%= link_to "logout",destroy_user_session_path, method: :delete ,class: 'text-white'%>
+                  <i class="fas fa-sign-out-alt mr-3"></i><%= link_to "logout",destroy_user_session_path, method: :delete ,class: 'text-white'%>
                 </li>
                 <% else %>
                 <li>
-                  <%= link_to "Home","/",class: 'text-white' %>
+                  <i class="fas fa-home text-white mr-3"></i><%= link_to "Home","/",class: 'text-white' %>
                 </li>
                 <li>
-                  <%= link_to "About",home_about_path ,class: 'text-white'%>
+                  <i class="fas fa-link text-white mr-3"></i><%= link_to "About",home_about_path ,class: 'text-white'%>
                 </li>
                 <li>
-                  <%= link_to "sign up",new_user_registration_path ,class: 'text-white'%>
+                  <i class="fas fa-user-plus text-white mr-3"></i><%= link_to "sign up",new_user_registration_path ,class: 'text-white'%>
                 </li>
                 <li>
-                  <%= link_to "login",new_user_session_path ,class: 'text-white'%>
+                  <i class="fas fa-sign-in-alt text-white mr-3"></i><%= link_to "login",new_user_session_path ,class: 'text-white'%>
                 </li>
                 <% end %>
              </ul>
@@ -51,9 +51,9 @@
       </div>
      </nav>
     </header>
-    <main class="mx-auto">
+    <main class="mx-auto w-50">
     <%= yield %>
     </main>
-
+<p class="text-center mt-3">CopyRight Infratop.inc</p>
   </body>
 </html>
