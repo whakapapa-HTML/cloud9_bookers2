@@ -1,0 +1,24 @@
+
+<h1>Books</h1>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col"></th>
+      <th scope="col">Title</th>
+      <th scope="col">Opinion</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row"><%= attachment_image_tag @user,:profile_image,:fill,40,40,fallback: 'no_image.jpeg'%></th>
+      <td><%= link_to book_path(@book) do %>
+      <%= @book.title %>
+
+      <% end %></td>
+      <td><%= @book.body %></td>
+      <td><%= link_to "Edit", edit_book_path(@user), class: "btn btn-success mt-2" %></td>
+      <td> <%= link_to "Destroy", book_path, method: :delete, class: "btn btn-danger mt-2" %></td>
+    </tr>
+  </tbody>
+</table>
