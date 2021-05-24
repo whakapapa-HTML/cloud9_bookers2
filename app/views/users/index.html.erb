@@ -1,9 +1,2 @@
 
-
-
-<h1>Users</h1>
-<% @users.each do |user| %>
-
-  <p>ショップ名：<%= user.name %></p>
-
-  <% end %>
+<%= render'users/show', user: @user

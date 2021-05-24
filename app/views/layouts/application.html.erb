@@ -21,16 +21,16 @@
              <ul class="navbar-nav ml-auto">
                <% if user_signed_in? %>
                 <li>
-                  <i class="fas fa-home mr-3"></i><%= link_to "Home","/", class: 'text-white'%>
+                  <i class="fas fa-home text-white mr-3"></i><%= link_to "Home", "/" ,class: 'text-white'%>
                 </li>
                 <li>
-                  <i class="fas fa-users mr-3"></i><%= link_to "Users","/", class: 'text-white'%>
+                  <i class="fas fa-users text-white mr-3"></i><%= link_to "Users","/", class: 'text-white'%>
                 </li>
                     <li>
-                  <i class="fas fa-book-open mr-3"></i><%= link_to "Books","/",class: 'text-white'%>
+                  <i class="fas fa-book-open text-white mr-3"></i><%= link_to "Books","/",class: 'text-white'%>
                 </li>
                 <li>
-                  <i class="fas fa-sign-out-alt mr-3"></i><%= link_to "logout",destroy_user_session_path, method: :delete ,class: 'text-white'%>
+                  <i class="fas fa-sign-out-alt text-white mr-3"></i><%= link_to "logout",destroy_user_session_path, method: :delete ,class: 'text-white'%>
                 </li>
                 <% else %>
                 <li>

@@ -1,18 +1,12 @@
 <h1>User info</h1>
 
-
 <%= attachment_image_tag user,:profile_image,:fill,100,100,fallback: 'no_image.jpeg'%>
-<table>
-  <thead>
-    <tr>
-      <th>Name </th>
-      <th><%= user.name %></th>
-    </tr>
-        <tr>
-      <th>Introduction </th>
-      <th><%= user.introduction %></th>
-    </tr>
-  </thead>
+
+<table class="table">
+
+  <tr><th>Name</th><th><%= user.name %></th></tr>
+  <tr><th>Introduction</th><th><%= user.introduction %></th></tr>
+
 </table>
 
 
