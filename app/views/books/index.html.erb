@@ -1,16 +1,2 @@
 
-<h1>Books</h1>
-<table>
-  <tr>
-    <th>Title</th>
-    <th>Body</th>
-  </tr>
-  <% @books.each do |book| %>
-  <tr>
-    <td><%= book.title %></td>
-    <td><%= book.body %></td>
-  </tr>
-</table>
-
-
-<% end %>
+<%= render'books/new', book: @book %>
