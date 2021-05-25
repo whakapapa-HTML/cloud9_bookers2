@@ -4,7 +4,7 @@ Rails.application.routes.draw do
                                     sessions: 'users/sessions' }
 
   resources :users, only:[:index,:new,:create,:show,:edit,:update,:destroy]
-  resources :books, only:[:index,:create,:show,:edit,:destroy]
+  resources :books, only:[:create,:index,:show,:edit,:destroy]
   root to: 'homes#top'
   get 'home/about' => 'homes#about',as:'home_about'
 
