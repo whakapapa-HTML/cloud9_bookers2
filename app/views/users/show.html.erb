@@ -10,6 +10,7 @@
       <th scope="col">Opinion</th>
     </tr>
   </thead>
+      <% @user_books.each do |user_book| %>
   <tbody>
     <tr>
       <th scope="row"><%= link_to user_path(@user) do %>
@@ -17,14 +18,12 @@
           <% end %>
       </th>
       <td>
-        <% @user_books.each do |user_book| %>
         <%= link_to book_path(user_book.id) do %>
         <%= user_book.title %>
         <% end %>
       </td>
-      <td>
-        <%= user_book.body %></td>
-        <% end %>
+      <td> <%= user_book.body %></td>
     </tr>
+        <% end %>
   </tbody>
 </table>
