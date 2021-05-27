@@ -1,6 +1,10 @@
 <%= render'users/show', user: @user %>
 <%= render'books/new', book: @book %>
 
+<% if flash[:notice] %>
+<p id="notice"><%= notice %></p>
+<% end %>
+
 <h1>Books</h1>
 <table class="table">
   <thead>

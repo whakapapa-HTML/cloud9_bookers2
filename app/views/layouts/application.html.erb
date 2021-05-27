@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
   <head>
@@ -7,6 +8,11 @@
       <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <style>
+      .text-white {
+        text-decoration: none;
+      }
+    </style>
   </head>
 
   <body class="d-flex flex-column vh- 100">
@@ -37,7 +43,7 @@
                   <i class="fas fa-home text-white mr-3"></i><%= link_to "Home","/",class: 'text-white' %>
                 </li>
                 <li>
-                  <i class="fas fa-link text-white mr-3"></i><%= link_to "About",home_about_path ,class: 'text-white'%>
+                  <i class="fas fa-link text-white mr-3"></i><%= link_to "About",current_user_path, class: 'text-white'%>
                 </li>
                 <li>
                   <i class="fas fa-user-plus text-white mr-3"></i><%= link_to "sign up",new_user_registration_path ,class: 'text-white'%>
@@ -52,6 +58,7 @@
      </nav>
     </header>
     <main class="mx-auto w-75">
+    <%= render 'layouts/notification' %>
     <%= yield %>
     </main>
 <p class="text-center mt-3">CopyRight Infratop.inc</p>

@@ -1,7 +1,7 @@
 <%= render'users/show', user: @user %>
 <%= render'books/new', book: @book %>
 
-<h1>Book Detail</h1>
+<h1>Book detail</h1>
 <table class="table">
   <tbody>
     <tr>
@@ -20,12 +20,12 @@
      </td>
      <td>
          <% if @user_book.user == current_user %>
-        <button type="button" class="btn btn-success "><%= link_to 'edit', edit_book_path, class: 'text-white' %></button>
+        <button type="button" class="btn btn-success "><%= link_to 'Edit', edit_book_path, class: 'text-white' %></button>
          <% end %>
      </td>
      <td>
           <% if @user_book.user == current_user %>
-        <button type="button" class="btn btn-danger"><%= link_to 'destroy', book_path, method: :delete, class: 'text-white' %></button>
+        <button type="button" class="btn btn-danger"><%= link_to 'Destroy', book_path, method: :delete, class: 'text-white' %></button>
          <% end %>
      </td>
     </tr>

@@ -35,8 +35,24 @@
   border-radius: 5px;
 }
 
+.fa-user-cog:hover {
+  background-color: gray;
+}
+
 .fa-user-cog:before {
   margin-left: 50%;
   line-height: 30px;
 }
 
+.fa-user-cog:hover:before {
+  color: white;
+}
+
+.error {
+  color: red;
+}
+
+.error_message {
+  color: red;
+  display: flex;
+}
