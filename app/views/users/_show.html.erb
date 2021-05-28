@@ -9,11 +9,10 @@
 
 </table>
 
-<% if user == current_user %>
-<%= link_to edit_user_path(current_user) do  %>
+<%= link_to edit_user_path(user.id) do  %>
 <i class="fas fa-user-cog"></i>
 <% end %>
-<% end %>
+
 
 
 
